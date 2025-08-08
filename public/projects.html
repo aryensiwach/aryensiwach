@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InternHub • Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+  <div id="navbar"></div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <h1 class="text-2xl font-bold">Projects</h1>
+
+    <!-- Filters -->
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+      <input id="search-input" type="text" placeholder="Search by name or tag" class="col-span-1 md:col-span-2 px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <select id="filter-category" class="px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <option value="">All Categories</option>
+      </select>
+      <select id="filter-difficulty" class="px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <option value="">All Difficulty</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+
+    <div class="mt-4 flex items-center gap-3">
+      <button id="apply-filters" class="px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">Apply</button>
+      <button id="clear-filters" class="px-4 py-2 rounded-md bg-gray-100 text-gray-800 hover:bg-gray-200">Clear</button>
+    </div>
+
+    <!-- Results -->
+    <div id="projects-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <p id="projects-empty" class="hidden text-sm text-gray-600">No projects found.</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/assets/js/projects.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
