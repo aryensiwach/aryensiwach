@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InternHub • Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+  <div id="navbar"></div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <h1 class="text-2xl font-bold">Dashboard</h1>
+
+    <div id="auth-guard" class="mt-6 hidden p-4 border border-amber-200 bg-amber-50 text-amber-800 rounded">
+      Please sign in to view your dashboard.
+    </div>
+
+    <section id="profile-section" class="mt-6 hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-1 border border-gray-200 rounded-lg p-5">
+          <h2 class="text-lg font-semibold">Profile</h2>
+          <div class="mt-4 space-y-1 text-sm">
+            <div><span class="text-gray-500">Name:</span> <span id="profile-name"></span></div>
+            <div><span class="text-gray-500">Email:</span> <span id="profile-email"></span></div>
+            <div><span class="text-gray-500">Joined:</span> <span id="profile-joined"></span></div>
+          </div>
+
+          <div class="mt-6">
+            <h3 class="text-sm font-semibold uppercase tracking-wide">Badges</h3>
+            <div id="badges" class="mt-2 flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 space-y-6">
+          <div class="border border-gray-200 rounded-lg p-5">
+            <h2 class="text-lg font-semibold">Solved Projects</h2>
+            <div id="solved-projects" class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+            <p id="solved-projects-empty" class="text-sm text-gray-600">No solved projects yet.</p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-5">
+            <h2 class="text-lg font-semibold">Completed Internships</h2>
+            <div id="solved-internships" class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+            <p id="solved-internships-empty" class="text-sm text-gray-600">No internships completed yet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/assets/js/dashboard.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

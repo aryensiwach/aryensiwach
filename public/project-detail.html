@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InternHub • Project Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+  <div id="navbar"></div>
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <button id="back-btn" class="text-sm text-gray-700 hover:text-indigo-700">← Back to Projects</button>
+
+    <div id="detail" class="mt-6">
+      <h1 id="name" class="text-3xl font-bold"></h1>
+      <div class="mt-2 flex flex-wrap gap-2">
+        <span id="category" class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"></span>
+        <span id="difficulty" class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded"></span>
+        <span id="badge" class="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded"></span>
+      </div>
+
+      <p id="description" class="mt-6 text-gray-700 whitespace-pre-line"></p>
+
+      <div class="mt-6">
+        <h2 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Languages</h2>
+        <div id="languages" class="mt-2 flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Tags</h2>
+        <div id="tags" class="mt-2 flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="mt-8 flex items-center gap-3">
+        <button id="mark-solved" class="px-4 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700">Mark as Solved</button>
+        <span id="status-msg" class="text-sm text-gray-600"></span>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module" src="/assets/js/project-detail.js"></script>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
